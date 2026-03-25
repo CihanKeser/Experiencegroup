@@ -24,11 +24,13 @@ jobs:
       - name: Build and export static site
         run: npm run export
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: out
-          publish_branch: gh-pages
-          cname: experiencegroup.net
-          allow_empty_commit: true
+          path: out
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
