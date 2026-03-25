@@ -1,0 +1,13 @@
+# Project Setup Progress
+
+- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+- [ ] Clarify Project Requirements
+- [x] Scaffold the Project - In Progress
+- [ ] Customize the Project
+- [ ] Install Required Extensions
+- [ ] Compile the Project
+- [ ] Create and Run Task
+- [ ] Launch the Project
+- [ ] Ensure Documentation is Complete
+
+## Next.js Project Setup
