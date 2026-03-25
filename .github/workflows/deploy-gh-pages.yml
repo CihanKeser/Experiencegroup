@@ -29,6 +29,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: out
-          publish_branch: main
-          destination_dir: docs
+          publish_branch: gh-pages
+          cname: experiencegroup.net
           allow_empty_commit: true
