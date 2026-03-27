@@ -19,13 +19,7 @@ export default function Home() {
       color: "text-orange-500",
       details: "Profesyonel bakım ve tamir hizmetleri",
     },
-    {
-      icon: Droplet,
-      title: "Su Tedariği",
-      description: "Bardak, şişe ve damacana su tedariği",
-      color: "text-orange-500",
-      details: "Temiz ve hijyenik su ürünleri",
-    },
+    
   ];
 
   const features = [
@@ -54,7 +48,7 @@ export default function Home() {
               Experince Group
             </h1>
             <p className="text-xl md:text-2xl text-orange-400 mb-6 drop-shadow-md">
-              Elektrik • Lastik & Jant • Su Tedariği
+              Elektrik • Lastik & Jant 
             </p>
             <Link
               href="/iletisim"
@@ -68,7 +62,7 @@ export default function Home() {
 
       {/* Services Section */}
       <section id="hizmetler" className="py-20 px-4 bg-white">
-        <div className="max-w-full mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
               Hizmetlerimiz
@@ -78,13 +72,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {services.map((service, i) => {
               const Icon = service.icon;
               return (
                 <div
                   key={i}
-                  className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-orange-500 hover:shadow-2xl transition duration-300 group"
+                  className="w-full max-w-lg bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-orange-500 hover:shadow-2xl transition duration-300 group"
                 >
                   <div className="bg-orange-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
                     <Icon className={`${service.color} w-8 h-8 group-hover:text-white transition`} />
@@ -124,7 +118,7 @@ export default function Home() {
               <Phone className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold mb-2">Telefon</h3>
-                <p className="text-gray-300">+90 xxx xxx xx xx</p>
+                <p className="text-gray-300">216 371 48 66</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -160,7 +154,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-white font-bold mb-3">Experince Group</h3>
-              <p className="text-sm">Elektrik, lastik-jant ve su tedariği konusunda güvenilir ortağınız</p>
+              <p className="text-sm">Elektrik, lastik-jant konusunda güvenilir ortağınız</p>
             </div>
             <div>
               <h3 className="text-white font-bold mb-3">Hızlı Linkler</h3>

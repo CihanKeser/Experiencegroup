@@ -31,13 +31,7 @@ const sliderItems: SliderItem[] = [
     bgColor: 'bg-gradient-to-r from-gray-700 to-gray-900',
     icon: '🛞',
   },
-  {
-    id: 3,
-    title: 'Su Tedariği',
-    description: 'Temiz su, bardak ve damacana su tedariği hizmetleri',
-    bgColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
-    icon: '💧',
-  },
+ 
 ];
 
 export function HeroSlider() {

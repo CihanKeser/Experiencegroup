@@ -17,7 +17,7 @@ export default function Hakkinda() {
               <h2 className="text-3xl font-bold mb-4 text-black">Biz Kimiz?</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Experince Group, 2000'li yıllardan itibaren elektrik malzemeleri, lastik-jant servisleri 
-                ve su tedariği alanında hizmet veren köklü bir firmadır. Deneyimli ekibimiz ve kaliteli 
+                alanında hizmet veren köklü bir firmadır. Deneyimli ekibimiz ve kaliteli 
                 ürünlerimizle müşterilerimizin güvenini kazanmıştır.
               </p>
               <p className="text-gray-600 leading-relaxed">

@@ -46,7 +46,7 @@ export default function Iletisim() {
                   <Phone className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-black mb-1">Telefon</h3>
-                    <p className="text-gray-600">+90 xxx xxx xx xx</p>
+                    <p className="text-gray-600">216 371 48 66</p>
                   </div>
                 </div>
 
@@ -120,7 +120,7 @@ export default function Iletisim() {
                     value={formData.telefon}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="+90 5xx xxx xx xx"
+                    placeholder="+90 xxx xxx xx xx"
                   />
                 </div>
 
