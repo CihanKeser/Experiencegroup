@@ -33,13 +33,12 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Ensure no Jekyll in output
-        run: |
-          echo "" > out/.nojekyll
+        run: echo "" > out/.nojekyll
 
-      - name: Upload artifact for GitHub Pages
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
