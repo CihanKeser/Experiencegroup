@@ -45,7 +45,7 @@ export default function Home() {
         {/* <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
           <div className="max-w-full mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-              Experince Group
+              Experience Group
             </h1>
             <p className="text-xl md:text-2xl text-orange-400 mb-6 drop-shadow-md">
               Elektrik • Lastik & Jant 
@@ -153,7 +153,7 @@ export default function Home() {
         <div className="max-w-full mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-white font-bold mb-3">Experince Group</h3>
+              <h3 className="text-white font-bold mb-3">Experience Group</h3>
               <p className="text-sm">Elektrik, lastik-jant konusunda güvenilir ortağınız</p>
             </div>
             <div>
@@ -174,7 +174,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center text-sm pt-8 border-t border-gray-700">
-            <p>&copy; 2026 Experince Group. Tüm hakları saklıdır.</p>
+            <p>&copy; 2026 Experience Group. Tüm hakları saklıdır.</p>
           </div>
         </div>
       </footer>

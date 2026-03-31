@@ -54,7 +54,7 @@ export default function Iletisim() {
                   <Mail className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-black mb-1">Email</h3>
-                    <p className="text-gray-600">info@experincegroup.com</p>
+                    <p className="text-gray-600">info@Experiencegroup.com</p>
                   </div>
                 </div>
 
@@ -154,7 +154,7 @@ export default function Iletisim() {
       {/* Footer */}
       <footer className="bg-black text-white py-8 px-4">
         <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>&copy; 2026 Experince Group. Tüm hakları saklıdır.</p>
+          <p>&copy; 2026 Experience Group. Tüm hakları saklıdır.</p>
         </div>
       </footer>
     </div>

@@ -6,7 +6,7 @@ export function Navigation() {
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-3xl font-bold text-orange-500 pt-2">
-            Experince Group
+            Experience Group
           </Link>
           <div className="hidden md:flex gap-4">
             <Link href="/#hizmetler" className="px-4 py-2 bg-black/90 border border-white/20 rounded-lg text-white font-medium hover:bg-orange-500 hover:border-orange-500 transition-all duration-300">
