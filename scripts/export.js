@@ -32,6 +32,11 @@ function copyDir(src, dest) {
 }
 
 const projectRoot = process.cwd();
+const nextConfig = {
+  output: 'export'
+}
+
+module.exports = nextConfig
 const outDir = path.join(projectRoot, "out");
 
 removeDir(outDir);
