@@ -1,8 +1,8 @@
 'use client';
 
-interface MapProps {
-  embedUrl?: string;
-  title?: string;
+type MapProps = {
+  embedUrl?: string
+  title?: string
 }
 
 export function Map({

@@ -192,12 +192,7 @@ export default function Iletisim() {
       <section className="py-4 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-black text-center">Konumumuz</h2>
-          <Map 
-            latitude={40.8732}
-            longitude={29.3043}
-            title="Experience Group"
-            address="Cevizli, Denizer Cd. no:4/A, 34865 Kartal, İstanbul"
-          />
+          <Map title="Experience Group" />
         </div>
       </section>
 

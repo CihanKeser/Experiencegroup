@@ -303,12 +303,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <Map
-              latitude={40.8732}
-              longitude={29.3043}
-              title="Experience Group"
-              address="Cevizli, Denizer Cd. no:4/A, 34865 Kartal, İstanbul"
-            />
+            <Map title="Experience Group" />
           </div>
         </section>
       </div>

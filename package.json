@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next build && node ./scripts/export.js",
-    "start": "next start",
+  "build": "next build",
+  "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
