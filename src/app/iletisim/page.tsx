@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import { Navigation } from "../../components/Navigation";
+import { Map } from "../../components/Map";
 
 export default function Iletisim() {
   const [formData, setFormData] = useState({
@@ -12,6 +13,8 @@ export default function Iletisim() {
     telefon: "",
     mesaj: "",
   });
+  const [status, setStatus] = useState<null | { type: "success" | "error"; message: string }>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: any) => {
     setFormData({
@@ -20,10 +23,33 @@ export default function Iletisim() {
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    alert("Mesajınız alındı. Kısa sürede size geri dönüş yapacağız.");
-    setFormData({ ad: "", email: "", telefon: "", mesaj: "" });
+    setStatus(null);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setStatus({ type: "error", message: data.error || "Mesaj gönderilirken hata oluştu." });
+      } else {
+        setStatus({ type: "success", message: "Mesajınız gönderildi. Kısa sürede size geri dönüş yapacağız." });
+        setFormData({ ad: "", email: "", telefon: "", mesaj: "" });
+      }
+    } catch (error) {
+      setStatus({ type: "error", message: "Sunucuya bağlanırken hata oluştu. Lütfen daha sonra tekrar deneyin." });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -34,7 +60,7 @@ export default function Iletisim() {
       
 
       {/* Contact Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
@@ -46,7 +72,7 @@ export default function Iletisim() {
                   <Phone className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-black mb-1">Telefon</h3>
-                    <p className="text-gray-600">216 371 48 66</p>
+                    <p className="text-gray-600">0216 371 48 66</p>
                   </div>
                 </div>
 
@@ -54,7 +80,7 @@ export default function Iletisim() {
                   <Mail className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-black mb-1">Email</h3>
-                    <p className="text-gray-600">info@Experiencegroup.com</p>
+                    <p className="text-gray-600">info@experiencegroup.com</p>
                   </div>
                 </div>
 
@@ -141,13 +167,37 @@ export default function Iletisim() {
 
                 <button
                   type="submit"
-                  className="w-full bg-orange-500 text-white font-semibold py-2 rounded-lg hover:bg-orange-600 transition"
+                  disabled={isSubmitting}
+                  className="w-full bg-orange-500 text-white font-semibold py-2 rounded-lg hover:bg-orange-600 transition disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  Mesaj Gönder
+                  {isSubmitting ? "Gönderiliyor..." : "Mesaj Gönder"}
                 </button>
+
+                {status ? (
+                  <p
+                    className={`mt-4 text-sm ${
+                      status.type === "success" ? "text-green-600" : "text-red-600"
+                    }`}
+                  >
+                    {status.message}
+                  </p>
+                ) : null}
               </form>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-4 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-black text-center">Konumumuz</h2>
+          <Map 
+            latitude={40.8732}
+            longitude={29.3043}
+            title="Experience Group"
+            address="Cevizli, Denizer Cd. no:4/A, 34865 Kartal, İstanbul"
+          />
         </div>
       </section>
 
